@@ -1,2 +1,0 @@
-2022/09/14 15:10:26 [error] 41#41: *10 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: lara1, request: "GET /_intellij_phpdebug_validator.php HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "lara1"
-2022/09/14 15:10:56 [error] 42#42: *12 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: lara1, request: "GET /_intellij_phpdebug_validator.php HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "lara1"
