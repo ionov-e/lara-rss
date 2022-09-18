@@ -44,6 +44,7 @@ RUN apt-get update \
              libpq-dev \
              supervisor \
              postgresql-client-13 \
+             cron \
   && pecl install mongodb \
   && echo "extension=mongodb.so" > /usr/local/etc/php/conf.d/mongodb-ext.ini
 
@@ -68,3 +69,8 @@ COPY docker/php-fpm/supervisord.conf /etc/supervisor/supervisord.conf
 COPY docker/php-fpm/workers.conf /etc/supervisor/conf.d/workers.conf
 
 EXPOSE 1597
+
+COPY docker/php-fpm/crontab /etc/cron.d/crontab
+RUN chmod 0644 /etc/cron.d/crontab
+RUN crontab /etc/cron.d/crontab
+CMD ["cron", "-f"]
